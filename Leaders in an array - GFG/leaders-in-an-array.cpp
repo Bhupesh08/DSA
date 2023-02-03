@@ -13,30 +13,40 @@ class Solution{
     public:
     vector<int> leaders(int a[], int n){
         
-        int i = n-1;
+    
         
         stack<int> st;
-        st.push(a[i]);
+        st.push(a[n-1]);
         
         vector<int> res;
         
-        while(i > 0) {
-            int j = i-1;
+        
+        for (int i = n-2; i >= 0; i--) {
             
-            while(a[j] < a[i] && j >=0) {
-                j--;
-            }
-            
-            
-            if(j>=0)
-            {
-                st.push(a[j]);
-                // i = j;
-                
-            }
-            
-            i = j;
+            if(a[i] >= st.top()) {         
+            st.push(a[i]);
         }
+        
+            
+        }  
+        
+        // while(i > 0) {
+        //     int j = i-1;
+            
+        //     while(a[j] < a[i] && j >=0) {
+        //         j--;
+        //     }
+            
+            
+        //     if(j>=0)
+        //     {
+        //         st.push(a[j]);
+        //         // i = j;
+                
+        //     }
+            
+        //     i = j;
+        // }
         
         while(!st.empty()) {
             res.push_back(st.top());
