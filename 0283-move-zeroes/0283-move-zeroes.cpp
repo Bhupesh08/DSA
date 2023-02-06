@@ -9,7 +9,8 @@ public:
         while( l < n && nums[l] != 0) {
             l++;
         }
-
+        
+        //The code below this can be replaced by the commented code
         int r = l + 1;
 
         while(r<n) {
