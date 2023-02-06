@@ -8,6 +8,10 @@ public:
         //Remember it using a game. Candidate is the protaganist (kinda our majority element in the end) and as soon as an element i.e not our candidate
         //is found, the life of candidate gets decremented, and we know that majority element/candidate appears more than half times, so it will somehow be alive at 
         //the end as we only decrement the life when any minority element is found.
+        
+        //the below code works fine when there is atleast one majority element present.
+        //In case it is given that there may be a possibility of no majority element, u need to traverse the array again and calculate the occurence(count) of
+        //candidate. if count > n/2, u return candidate else return -1;
         int candidate = INT_MIN;
         int life = 0;
         
