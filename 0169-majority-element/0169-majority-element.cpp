@@ -6,7 +6,7 @@ public:
 
         //Most optimal solution using Boyer-Moore Voting algorithm.
         //Remember it using a game. Candidate is the protaganist (kinda our majority element in the end) and as soon as an element i.e not our candidate
-        //is found, the life of candidate gets decremented, and we know that majority elements appears more than half times, so it will somehow be alive at 
+        //is found, the life of candidate gets decremented, and we know that majority element/candidate appears more than half times, so it will somehow be alive at 
         //the end as we only decrement the life when any minority element is found.
         int candidate = INT_MIN;
         int life = 0;
