@@ -70,7 +70,8 @@ int search(vector<int>& nums, int target) {
                                                
 //Method - 2:
                                                
-    ![Screenshot 2023-02-13 232925](https://user-images.githubusercontent.com/83157814/218546637-72ba4e2f-ecc6-4b08-b3b1-f65658d73162.png)
+   ![Screenshot 2023-02-13 232925](https://user-images.githubusercontent.com/83157814/218547405-7cbd7473-38bb-49d9-9c00-f601b5bfcaa9.png)
+
                                                
                                                
                                                
@@ -78,6 +79,6 @@ int search(vector<int>& nums, int target) {
                                                
   ![3](https://user-images.githubusercontent.com/83157814/218547231-04f8fad9-c694-4b64-80f0-d7fca66e04fb.jpg)
                                              
-    ![Screenshot (48)](https://user-images.githubusercontent.com/83157814/218547285-0b4c6c12-3527-45ab-a961-832d854219d6.png)
+ ![Screenshot (48)](https://user-images.githubusercontent.com/83157814/218547444-6dd785ec-4eb4-44b3-8da7-906cf7d565fd.png)
                                            
                                            
