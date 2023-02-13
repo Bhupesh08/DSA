@@ -1,3 +1,5 @@
+//Method-2: By Striver and alisha didi: More intuitive and easier code
+
 class Solution {
 public:
     int search(vector<int>& nums, int target) {
