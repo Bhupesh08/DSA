@@ -14,48 +14,31 @@ public:
                 return mid;
             }
             
-            //case when mid lies in the Left sorted array
-            //l+1 because it takes care of the edge case when l = -1.
+            //is the left part sorted
             else if(nums[mid] >= nums[l+1]) {
-                if(target > nums[mid]) {
-                    l = mid;   //No confusion: target lies in Right search space
-                }
-                 
-                else if(target < nums[mid]) {   //confusion as target could be present in either of the search space
-                    if(target > nums[l+1]) {
-                        r = mid;
-                    } 
-                
-                    else if(target < nums[l+1]) {
-                        l = mid;
-                    } 
-                    //this else becomes important as equality condition pe r = mid ho rha tha and l+1 wale ke chance the ki wo search space se bahar chala jaata which we dont want as it could be our potential answer.
-                    else {
+                if(target>=nums[l+1] && target<nums[mid]) {
+                    if(target==nums[l+1]) {
                         return l+1;
                     }
+                    r = mid;
+                } else {
+                    l = mid;
                 }
             }
             
-            //mid lies in the right sorted array
+            //if right part is sorted
             else {
-                if(target < nums[mid]) {
-                    r = mid;
-                }
-                
-                else if(target > nums[mid]) {
-                    if(target > nums[r-1]) {
-                        r = mid;
-                    } 
-                    
-                    else if(target < nums[r-1]) {
-                        l = mid;
-                    } 
-                    
-                    else {
+                if(target>nums[mid] && target<=nums[r-1]) {
+                    if(target==nums[r-1]) {
                         return r-1;
                     }
+                    l = mid;
+                } else {
+                    r = mid;
                 }
             }
+            
+            
         }
         
         return -1;
