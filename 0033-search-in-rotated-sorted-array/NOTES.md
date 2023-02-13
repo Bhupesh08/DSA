@@ -4,53 +4,7 @@
 ![1](https://user-images.githubusercontent.com/83157814/218546502-e02f7464-89fe-4281-8c07-7eb439a8048d.jpg)
 ![2](https://user-images.githubusercontent.com/83157814/218546527-8dcc6af6-f395-48e1-ace5-b93991907f2b.jpg)
 
-class Solution {
-public:
-    int search(vector<int>& nums, int target) {
-        
-        int n = nums.size();
-        
-        int l=-1, r=n;
-        
-        while(r>l+1) {
-            int mid = l - (l-r)/2;
-            
-            //if possible answer (mid) is our answer, return answer.
-            if(nums[mid]==target) {
-                return mid;
-            }
-            
-            //is the left part sorted
-            else if(nums[mid] >= nums[l+1]) {
-                if(target>=nums[l+1] && target<nums[mid]) {
-                    if(target==nums[l+1]) {
-                        return l+1;
-                    }
-                    r = mid;
-                } else {
-                    l = mid;
-                }
-            }
-            
-            //if right part is sorted
-            else {
-                if(target>nums[mid] && target<=nums[r-1]) {
-                    if(target==nums[r-1]) {
-                        return r-1;
-                    }
-                    l = mid;
-                } else {
-                    r = mid;
-                }
-            }
-            
-            
-        }
-        
-        return -1;
-        
-    }
-};
+
 int search(vector<int>& nums, int target) {
         
         int n = nums.size();
@@ -122,5 +76,8 @@ int search(vector<int>& nums, int target) {
                                                
   //Method - 3: Preferred
                                                
-                                               
+  ![3](https://user-images.githubusercontent.com/83157814/218547231-04f8fad9-c694-4b64-80f0-d7fca66e04fb.jpg)
+                                             
+    ![Screenshot (48)](https://user-images.githubusercontent.com/83157814/218547285-0b4c6c12-3527-45ab-a961-832d854219d6.png)
+                                           
                                            
