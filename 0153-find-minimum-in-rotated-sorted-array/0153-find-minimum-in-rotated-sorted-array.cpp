@@ -19,8 +19,10 @@ public:
         while(r>l+1) {
             int mid = l - (l-r)/2;
             
+            //mid lies in left sorted array
             if(nums[mid] >= nums[0]) {
                 l = mid;
+            //mid lies in right sorted array
             } else {
                 res = min(res, nums[mid]);
                 r = mid;
