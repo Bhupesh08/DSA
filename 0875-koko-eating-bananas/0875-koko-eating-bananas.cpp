@@ -1,5 +1,7 @@
 class Solution {
 private: 
+    //The given value of k is good when koko can eat all the bananas within given h hrs
+    //So the fxn good(speed) return true when it is possible to eat all the bananas within h hrs else returns false
     bool good(vector<int>& piles, int h, int k) {
         int n = piles.size();
         double hrs = 0;
@@ -21,6 +23,7 @@ public:
         
         int n = piles.size();
         
+        //finding the max element to decide the upper limit of the search space
         long long max = INT_MIN;
         for(int i=0; i<n; i++) {
             if(piles[i] > max) {
@@ -28,6 +31,7 @@ public:
             }
         }
         
+        //edge case
         if(n==h) {
             return max;
         }
