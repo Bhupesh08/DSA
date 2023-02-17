@@ -29,6 +29,7 @@ public:
             return ceil((double)nums[0]/(double)threshold);
         }
         
+        //Finding max to assign the upper limit of search space
         int maxi = INT_MIN;
         for(int i=0; i<n; i++) {
             if(nums[i] > maxi) {
@@ -36,6 +37,8 @@ public:
             }
         }
         
+        
+        //The binary search begins:
         int l = 0;
         int r = maxi + 1;
         
