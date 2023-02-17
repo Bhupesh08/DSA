@@ -44,6 +44,7 @@ public:
         
         int n = weights.size();
         
+        //Calculating the lower and upper limit of initial search space:
         int sum = 0, maxi = INT_MIN;
         for(int i=0; i<n; i++) {
             sum += weights[i];
@@ -53,7 +54,7 @@ public:
         }
         
         
-        
+        //Binary Search begins:
         int l = maxi - 1;
         int r = sum + 1;
         
