@@ -3,8 +3,8 @@ private:
     
     bool good(vector<int>& bloomDay, int m, int k, int days) {
     int n = bloomDay.size();
+        
     // vector<int> vec(n, 0);
-
     // for(int i=0; i<n; i++) {
     //     if(bloomDay[i] <= days) {
     //         vec[i] = 1;
