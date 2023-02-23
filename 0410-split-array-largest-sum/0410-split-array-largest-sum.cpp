@@ -39,7 +39,7 @@ public:
         }
         
         int l = *max_element(nums.begin(), nums.end()) - 1;
-        int r = accumulate(nums.begin(), nums.end(), 0) + 1;
+        int r = accumulate(nums.begin(), nums.end(), 0);
         
         while(r > l+1) {
             int mid = l - (l-r)/2;
