@@ -15,14 +15,17 @@ public:
         slow = head;
         fast = head;
         
+        //using fast and slow pointer technique to make slow point to the middle of the given list
         while(fast!=NULL && fast->next!=NULL) {
             slow = slow->next;
             fast = fast->next->next;
         }
         
+        
+        //Reversing the list from after that middle point
+        //to make the comparison as we do in case of array possible
         ListNode* prev = NULL;
         ListNode* nex;
-        
         while(slow!=NULL) {
             nex = slow->next;
             slow->next = prev;
@@ -31,6 +34,7 @@ public:
         }
         
         //now prev is pointing to the last element of the linked list
+        //We could just compare like array now
         while(prev!=NULL) {
             if(head->val != prev->val) {
                 return false;
