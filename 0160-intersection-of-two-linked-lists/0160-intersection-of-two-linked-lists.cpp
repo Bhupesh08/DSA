@@ -9,23 +9,43 @@
 class Solution {
 public:
     ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
-        set<ListNode*> hashset;
         
-        //Storing the address of all the nodes of A LinkedList
-        while(headA!=NULL) {
-            hashset.insert(headA);
-            headA = headA->next;
+        int countA = 0, countB = 0;
+        ListNode* dummyA = headA;
+        ListNode* dummyB = headB;
+        
+        while(dummyA!=NULL) {
+            countA++;
+            dummyA = dummyA->next;
         }
         
-        //Traversing the B LinkedList, If any address of A is found, means that is the intersection
-        while(headB!=NULL) {
-            if(hashset.count(headB)) {
-                return headB;
-            } else {
+        while(dummyB!=NULL) {
+            countB++;
+            dummyB = dummyB->next;
+        }
+        
+        int offset = abs(countA - countB);
+        
+        if(countA > countB) {
+            while(offset) {
+                headA = headA->next;
+                offset--;
+            } 
+        } else {
+            while(offset) {
                 headB = headB->next;
+                offset--;
             }
         }
         
+        while(headA!=NULL && headB!=NULL) {
+            if(headA==headB) return headA;
+            else {
+                headA = headA->next;
+                headB = headB->next;
+            }
+        }
+    
         return NULL;
     }
 };
