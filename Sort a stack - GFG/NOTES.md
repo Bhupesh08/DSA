@@ -6,3 +6,4 @@
 ![6](https://user-images.githubusercontent.com/83157814/226099786-e0baaa99-33ed-40b4-9857-5b09ac49a28b.jpg)
 ![7](https://user-images.githubusercontent.com/83157814/226099796-62979988-a6d1-4f9b-8010-d21c853a854d.jpg)
 ![8](https://user-images.githubusercontent.com/83157814/226099804-ab48e906-ec3d-4b73-88d4-5dc303e9f684.jpg)
+![code sort a stack](https://user-images.githubusercontent.com/83157814/226099828-527b9d82-1bc3-4c09-a075-27f82fc7fe52.png)
