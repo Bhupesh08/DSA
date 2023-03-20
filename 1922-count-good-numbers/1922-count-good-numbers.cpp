@@ -10,8 +10,10 @@ public:
         //Induction
         ans *= ans;
         ans %= mod;       //Any change in answer means mode to be taken
-        if(x%2) {ans *= a;
-        ans %= mod;}       //Any change in answer means mode to be taken
+        if(x%2) {
+            ans *= a;
+            ans %= mod;   //Any change in answer means mode to be taken
+        }       
         
         return ans;
     }
