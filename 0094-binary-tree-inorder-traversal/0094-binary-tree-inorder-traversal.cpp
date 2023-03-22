@@ -31,16 +31,20 @@ public:
         TreeNode* node = root;
         
         while(true) {
+            //Pushing the left part till it doesn't become NULL
             if(node != NULL) {
                 st.push(node);
                 node = node->left;
-            } else {
-                if(st.empty()) break;
+            } 
+            //if it has become NULL, then the top() is pointing to the element that has to come in Inorder
+            else {
+                if(st.empty()) break;   //If Node == NULL and stack has become empty -> we are done 
+                
                 node = st.top();
                 st.pop();
-                
                 res.push_back(node->val);
                 
+                //Traverse the right part
                 node = node->right;
             }
         }
