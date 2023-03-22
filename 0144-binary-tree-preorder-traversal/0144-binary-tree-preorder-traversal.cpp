@@ -38,6 +38,7 @@ public:
             res.push_back(current->val);
             st.pop();
             
+            //Take right before left because its a stack bitch, LIFO, so left is put after right because we want to pop left first.
             if(current->right) st.push(current->right);
             if(current->left) st.push(current->left);
         }
