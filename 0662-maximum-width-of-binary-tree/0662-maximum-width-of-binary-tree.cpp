@@ -12,6 +12,7 @@
 class Solution {
 public:
     int widthOfBinaryTree(TreeNode* root) {
+        
         if(root == NULL) return 0;
         
         queue<pair<TreeNode*, int>> q;
