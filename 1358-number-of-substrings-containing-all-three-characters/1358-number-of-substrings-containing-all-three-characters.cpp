@@ -38,16 +38,3 @@ public:
 
 
 
-// int left = 0, right = 0, count = 0;
-//     unordered_map<char, int> freq;
-//     while (right < s.size()) {
-//         freq[s[right]]++;
-//         right++;
-//         while (freq['a'] && freq['b'] && freq['c']) {
-//             cout << s.size() - right + 1 << endl;
-//             count += s.size() - right + 1;
-//             freq[s[left]]--;
-//             left++;
-//         }
-//     }
-//     return count;
