@@ -8,9 +8,9 @@ public:
                 odd_count++;
             }
             
-            // Check if the current sum is greater than the goal.
+            // Check if the no. of odd numbers in the subarray is greater than the required.
             while (left < right && odd_count > k) {
-                // If it is, subtract the value at the left pointer from the sum
+                // If it is, subtract the odd_count based on if left pointer is pointing to a odd/even number
                 // and move the left pointer to the right.
                 if(nums[left] % 2 == 1) {
                     odd_count--;
@@ -18,12 +18,12 @@ public:
                 left++;
             }
             
-            // If the current sum equals the goal, increment the count of subarrays
-            // and count the number of contiguous zeros on the left side of the subarray.
+            // If the no. of odd numbers in the subarray is equal to required, increment the count of subarrays
+            // and count the number of contiguous even number on the left side of the subarray.
             if (odd_count == k) {
                 count++;
                 
-                // Count the number of contiguous zeros on the left side of the subarray.
+                // Count the number of contiguous even number on the left side of the subarray.
                 int l = left;
                 while (l < right && nums[l] % 2 == 0) {
                     count++;
@@ -51,32 +51,3 @@ public:
 
 
 
-
-// int numberOfSubarrays(vector<int>& nums, int k) {
-//         int odd_count = 0;
-//         int res = 0;
-        
-//         int i = 0, j = 0;
-        
-//         while(j < nums.size()) {
-//             if(nums[j] % 2 == 1) {
-//                 odd_count++;
-//             }
-            
-//             while(odd_count > k) {
-//                 if(nums[j] % 2 == 1) {
-//                     odd_count--;
-//                 }
-//                 i++;
-//             }
-            
-//             if(odd_count == k) {
-//                 res++;
-//             }
-           
-//             j++;
-            
-//         }
-        
-//         return res;
-//     }
