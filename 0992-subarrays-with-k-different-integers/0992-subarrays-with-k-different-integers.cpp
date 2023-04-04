@@ -1,6 +1,6 @@
 class Solution {
 private:
-int kDistinctSubarrays(vector<int> &arr, int k) {
+int atMostkDifferentIntegers(vector<int> &arr, int k) {
     
     int i = 0, j = 0;
     int res = 0;
@@ -24,6 +24,6 @@ int kDistinctSubarrays(vector<int> &arr, int k) {
 
 public:
     int subarraysWithKDistinct(vector<int>& nums, int k) {
-        return kDistinctSubarrays(nums, k) - kDistinctSubarrays(nums, k-1); 
+        return atMostkDifferentIntegers(nums, k) - atMostkDifferentIntegers(nums, k-1); 
     }
 };
